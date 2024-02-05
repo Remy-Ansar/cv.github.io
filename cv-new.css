@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+html {
+
+}
+
+body {
+    height: 100%;
+}
+
+
+ul {
+    list-style: none;
+}
+header,
+aside,
+main,
+.container,
+.mainContent {
+    padding: 15px;
+}
+
+.Titre {
+text-align: center;
+
+}
+
+p {
+    display: flex;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/*Container*/
+.container {
+    height: 100%;
+    /* border : 1px solid black; */
+    display : grid;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px ;
+    grid-template-areas: 
+    "aside header header"
+    "aside main main"
+    "aside main main"
+    "aside main main";
+}
+
+
+/*Header*/
+header {
+    grid-area: header;
+    border-right : 1px solid black;
+    width: 100%;
+    height: 100%;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+.headerContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+    gap: 5px 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.nameTitle {
+    font-size: 3em;
+    margin-bottom: 15px;
+    border-top: 3px solid black;
+    width: 50%;
+}
+
+.institution {
+    margin-top: 15px;
+}
+
+.diplomaBorder {
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
+}
+
+.diplomaBorderMiddle {
+    border-bottom: 1px dashed black;
+    margin-bottom: 1.8em;
+}
+
+
+/*Aside*/
+aside {
+    grid-area: aside;
+    border-right : 3px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.listAside {
+    font-weight: bold;
+    list-style:unset;
+    height: 100%
+}
+
+.jauge {
+    border-bottom: 3px solid black;
+    list-style: none;
+}
+
+.asideContent {
+
+}
+
+
+
+
+/*Main*/
+main {
+    height: 75%;
+    grid-area: main;
+    /* border : 1px solid black; */
+    display : flex;
+}
+
+.mainGridLeft {
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr;
+    gap: 10px ;
+}
+
+.mainGridRight {
+    margin-top: 3em;
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr 1fr 1fr;
+    gap: 10px ;
+}
+
+
+.mainContent {
+    /* border : 1px solid black; */
+    height: 100%;
+}
+
+.mainContentTitre {
+    /* border : 1px solid black; */
+    height: 100%;
+ 
+}
