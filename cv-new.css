@@ -1,14 +1,199 @@
+@font-face {
+    font-family: baron-Neue;
+    src: url(/Baron_Neue/Baron\ Neue\ Black.otf);
+}
 * {
     box-sizing: border-box;
     margin: 0px;
 }
 
 html {
+    font-size: 0.8em;
 
 }
 
 body {
     height: 100%;
+    background: rgb(163,224,237);
+background: -moz-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+background: -webkit-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+background: linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3e0ed",endColorstr="#ffffff",GradientType=1);
+}
+
+ul {
+    list-style: none;
+}
+
+header,
+aside,
+main,
+.container,
+.mainContent {
+    padding: 5px;
+}
+
+.Titre {
+text-align: center;
+
+}
+
+p {
+    display: flex;
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/*Container*/
+.container {
+    height: 100%;
+    width: 90%;
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+
+}
+img {
+    display: none;
+}
+
+/*Header*/
+header {
+    display: flex;
+    flex-direction: column;
+    border-right : 1px solid black;
+    height: 50vh;
+   box-sizing: border-box;
+   overflow: hidden;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.nameTitle {
+    font-size: 3em;
+    margin-bottom: 15px;
+    border-top: 3px solid black;
+    width: 50%;
+    font-family: baron-neue;
+}
+
+.institution {
+    margin-top: 15px;
+}
+
+.diplomaBorder {
+    border-bottom: 1px dashed black;
+    padding-bottom: 5px;
+}
+
+/*Aside*/
+aside {
+
+    border-right : 3px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.listAside {
+    font-weight: bold;
+    list-style:unset;
+    height: 100%
+}
+
+.jauge {
+    border-bottom: 3px solid black;
+    list-style: none;
+}
+
+.asideContent {
+
+}
+
+
+#underBorder {
+    border-top: 3px solid black;
+    padding-top: 5px;
+}
+
+/*Main*/
+main {
+    display : grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+
+}
+
+
+.mainContent {
+margin-bottom: 5em;
+}
+
+.mainContentTitre {
+
+
+ 
+}
+
+h2 {
+    font-family: baron-neue;  
+}
+
+h3 { 
+    font-family: baron-neue;
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+.duration {
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.mainContentList {
+    list-style: unset;
+    font-weight: bold;
+}
+
+
+.subtextMain {
+font-size: smaller;
+font-style: normal;
+}
+
+
+
+@media screen and (min-width : 760px) {
+    
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+/* html {
+
+} */
+
+body {
+    height: 100%;
+    background: rgb(163,224,237);
+background: -moz-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+background: -webkit-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+background: linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3e0ed",endColorstr="#ffffff",GradientType=1);
 }
 
 
@@ -66,7 +251,7 @@ header {
 
 .headerContent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.45fr;
     grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
     gap: 5px 0px;
     width: 100%;
@@ -89,11 +274,8 @@ header {
 .diplomaBorder {
     border-bottom: 1px dashed black;
     padding-bottom: 5px;
-}
-
-.diplomaBorderMiddle {
-    border-bottom: 1px dashed black;
-    margin-bottom: 1.8em;
+    margin-right: 5px;
+ 
 }
 
 
@@ -105,24 +287,47 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width:unset;
 }
 
-.listAside {
+.listAsideMany {
     font-weight: bold;
     list-style:unset;
-    height: 100%
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 12em;
+}
+
+.listAsideFew {
+    font-weight: bold;
+    list-style:unset;
+    height: 100%;
+    justify-content: space-around;
+    height: 5em;
 }
 
 .jauge {
     border-bottom: 3px solid black;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .asideContent {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15em; */
 
 }
 
-
+h3 {
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
 
 
 /*Main*/
@@ -159,3 +364,14 @@ main {
     height: 100%;
  
 }
+
+}
+
+#hobbiesBold {
+    font-weight: bold;
+}
+
+.hobbies {
+    font-style: italic;
+}
+
