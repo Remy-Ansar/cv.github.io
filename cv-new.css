@@ -1,7 +1,5 @@
-@font-face {
-    font-family: baron-Neue;
-    src: url(/Baron_Neue/Baron\ Neue\ Black.otf);
-}
+/*_____________________________________________________Main layout & properties____________________________________________________________________________________________________________*/
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -9,16 +7,17 @@
 
 html {
     font-size: 0.8em;
+    font-family: EB_Garamond;
 
 }
 
 body {
     height: 100%;
-    background: rgb(163,224,237);
-background: -moz-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-background: -webkit-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-background: linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3e0ed",endColorstr="#ffffff",GradientType=1);
+    background: rgb(163, 224, 237);
+    background: -moz-linear-gradient(90deg, rgba(163, 224, 237, 1) 39%, rgba(255, 255, 255, 1) 80%);
+    background: -webkit-linear-gradient(90deg, rgba(163, 224, 237, 1) 39%, rgba(255, 255, 255, 1) 80%);
+    background: linear-gradient(90deg, rgba(163, 224, 237, 1) 39%, rgba(255, 255, 255, 1) 80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3e0ed", endColorstr="#ffffff", GradientType=1);
 }
 
 ul {
@@ -29,13 +28,16 @@ header,
 aside,
 main,
 .container,
-.mainContent {
+.mainContent,
+.nameTitle,
+.headerContent,
+#RS {
     padding: 5px;
+    
 }
 
 .Titre {
-text-align: center;
-
+    text-align: center;
 }
 
 p {
@@ -43,32 +45,85 @@ p {
     width: 100%;
 }
 
+.container {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    border-right: 3px solid black;
+}
+
+#cvPic {
+    display: none;
+}
+
+
+/*_____________________________________________________Fonts____________________________________________________________________________________________________________*/
+
+
+@font-face {
+    font-family: Baron_Neue;
+    src: url(font/Baron_Neue/Baron\ Neue\ Black.otf);
+}
+
+@font-face {
+    font-family: Cormorant_Infant;
+    src: url(font/Cormorant_Infant/CormorantInfant-Regular.ttf);
+}
+
+@font-face {
+    font-family: EB_Garamond;
+    src: url(font/EB_Garamond/EBGaramond-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Playfair_Display;
+    src: url(font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
 .bold {
     font-weight: bold;
 }
 
-
-/*Container*/
-.container {
-    height: 100%;
-    width: 90%;
-    display : grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-
-}
-img {
-    display: none;
+#name {
+    font-family: Baron_Neue;
 }
 
-/*Header*/
+#travel {
+    font-family: Playfair_Display;
+}
+
+h1, h2 {
+    font-family: Playfair_Display;
+}
+
+h3 {
+    
+    margin-bottom: 1em;
+    font-size: 1.4em;
+}
+
+#news {
+    font-family: EB_Garamond;
+    gap: 5px 5px;
+}
+#newsContent {
+    display: block;
+    line-height: 1.6em;
+}
+
+
+/*_____________________________________________________Header properties____________________________________________________________________________________________________________*/
+
+
 header {
-    display: flex;
-    flex-direction: column;
-    border-right : 1px solid black;
-    height: 50vh;
-   box-sizing: border-box;
-   overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .headerContent {
@@ -79,12 +134,18 @@ header {
     box-sizing: border-box;
 }
 
+#name {
+    font-size: 4em;
+    width: 100%;
+    height: fit-content;
+}
+
 .nameTitle {
-    font-size: 3em;
-    margin-bottom: 15px;
-    border-top: 3px solid black;
-    width: 50%;
+    font-size: 10em;
+    margin-bottom: 0.3em;    
+    height: fit-content;
     font-family: baron-neue;
+    
 }
 
 .institution {
@@ -96,20 +157,64 @@ header {
     padding-bottom: 5px;
 }
 
-/*Aside*/
+.borderContentHeader {
+display: flex;
+}
+
+.rightUnderBorder {
+border-bottom: 3px solid black;
+width: 100%;
+margin-left: 7em;
+}
+
+.leftUnderBorder {
+width:30%;
+}
+
+.leftTopUnderBorder {
+    border-bottom: 3px solid black;
+    width: 65%;
+}
+
+.rightTopUnderBorder {
+    width: 30%;
+}
+
+/*_____________________________________________________Aside properties____________________________________________________________________________________________________________*/
+
+
 aside {
 
-    border-right : 3px solid black;
+    /* border-right: 3px solid black; */
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
+}
+
+#RS {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 1.2em;
+    gap: 0px 15px;
+}
+
+.listAsideID {
+    margin-top: 1em;
+    font-weight: bold;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 15em;
 }
 
 .listAside {
     font-weight: bold;
-    list-style:unset;
+    list-style: unset;
     height: 100%
 }
 
@@ -118,43 +223,74 @@ aside {
     list-style: none;
 }
 
-.asideContent {
-
+.jauge {
+    width: 35%;
+    margin-top: 0.5em;
+    overflow-x: hidden;
+    transition-delay: 200ms;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
 }
 
 
-#underBorder {
-    border-top: 3px solid black;
-    padding-top: 5px;
+#htmlJauge:hover {
+    width: 100%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
 }
 
-/*Main*/
+#cssJauge:hover {
+    width: 80%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+#javascriptJauge:hover {
+    width: 50%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+#sqlJauge:hover {
+    width: 60%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+#phpJauge:hover {
+    width: 60%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+
+#hobbiesBold {
+    font-weight: bold;
+    font-family: Playfair_Display;
+}
+
+.hobbies {
+    font-style: italic;
+    font-family: Playfair_Display;
+}
+
+
+/*_____________________________________________________Main properties____________________________________________________________________________________________________________*/
+
+
 main {
-    display : grid;
+    display: grid;
     grid-template-columns: 1fr;
     grid-auto-flow: row;
-
 }
-
 
 .mainContent {
-margin-bottom: 5em;
-}
-
-.mainContentTitre {
-
-
- 
-}
-
-h2 {
-    font-family: baron-neue;  
-}
-
-h3 { 
-    font-family: baron-neue;
-    margin-bottom: 1em;
-    font-size: 1.4em;
+    margin-bottom: 5em;
 }
 
 .duration {
@@ -165,213 +301,208 @@ h3 {
 .mainContentList {
     list-style: unset;
     font-weight: bold;
+    line-height: 2em;
 }
 
 
 .subtextMain {
-font-size: smaller;
-font-style: normal;
+    font-size: 1em;
+    font-style: italic;
+}
+.subtextMainMiscaleanous {
+    font-size: 1.5em;
+    
 }
 
+/*_____________________________________________________Footer properties____________________________________________________________________________________________________________*/
+
+footer {
+    height: 100%;
+}
+/*_____________________________________________________Responsive properties____________________________________________________________________________________________________________*/
 
 
 @media screen and (min-width : 760px) {
-    
 
-* {
-    box-sizing: border-box;
-    margin: 0px;
-}
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+    }
 
-/* html {
+    ul {
+        list-style: none;
+    }
 
-} */
-
-body {
-    height: 100%;
-    background: rgb(163,224,237);
-background: -moz-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-background: -webkit-linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-background: linear-gradient(90deg, rgba(163,224,237,1) 39%, rgba(255,255,255,1) 80%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a3e0ed",endColorstr="#ffffff",GradientType=1);
-}
-
-
-ul {
-    list-style: none;
-}
-header,
-aside,
-main,
-.container,
-.mainContent {
-    padding: 15px;
-}
-
-.Titre {
-text-align: center;
-
-}
-
-p {
-    display: flex;
-    width: 100%;
-}
-
-.bold {
-    font-weight: bold;
-}
+    header,
+    aside,
+    main,
+    .container,
+    .mainContent,
+    .nameTitle,
+    #RS {
+        padding: 15px;
+    }
 
 
-/*Container*/
-.container {
-    height: 100%;
-    /* border : 1px solid black; */
-    display : grid;
-    grid-template-columns: 0.5fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px ;
-    grid-template-areas: 
-    "aside header header"
-    "aside main main"
-    "aside main main"
-    "aside main main";
-}
+
+    /*Container grid wider frames*/
+    .container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "aside header header"
+            "aside main main"
+            "aside main main"
+            "aside main main"
+            "aside footer footer";
+    }
 
 
-/*Header*/
-header {
-    grid-area: header;
-    border-right : 1px solid black;
-    width: 100%;
-    height: 100%;
-   box-sizing: border-box;
-   overflow: hidden;
-}
+    /*Header grid wider frames*/
+    header {
+        grid-area: header;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
 
-.headerContent {
-    display: grid;
-    grid-template-columns: 1fr 0.45fr;
-    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
-    gap: 5px 0px;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-}
+    .headerContent {
+        display: grid;
+        grid-template-columns: 1fr 0.45fr;
+        grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+        gap: 5px 0px;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        box-sizing: border-box;
+        font-size: 1.8em;
+    }
 
-.nameTitle {
-    font-size: 3em;
-    margin-bottom: 15px;
-    border-top: 3px solid black;
-    width: 50%;
-}
+    .nameTitle {
+        font-size: 3em;
+        margin-bottom: 0.35em;
+        width: 50%;
+    }
 
-.institution {
-    margin-top: 15px;
-}
+    .institution {
+        margin-top: 15px;
+    }
 
-.diplomaBorder {
-    border-bottom: 1px dashed black;
-    padding-bottom: 5px;
-    margin-right: 5px;
- 
-}
+    .diplomaBorder {
+        border-bottom: 1px dashed black;
+        padding-bottom: 5px;
+        margin-right: 5px;
 
+    }
 
-/*Aside*/
-aside {
-    grid-area: aside;
-    border-right : 3px solid black;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width:unset;
-}
+    #borderContentHeader {
+        display: flex;
+        }
+        
+        #rightUnderBorder {
+        border-bottom: 3px solid black;
+        width: 100%;
+        margin-left: 20em;
+        }
+        #leftUnderBorder {
+        width:30%;
+        }
+        
+        #leftTopUnderBorder {
+            border-bottom: 3px solid black;
+            width: 55%;
+            margin-right: 25em;
+        }
+        
+        #rightTopUnderBorder {
+            width: 30%;
+        }
 
-.listAsideMany {
-    font-weight: bold;
-    list-style:unset;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 12em;
-}
+        #name {
+            font-size: 8em;
+            width: 100%;
+            height: fit-content;
+        }
 
-.listAsideFew {
-    font-weight: bold;
-    list-style:unset;
-    height: 100%;
-    justify-content: space-around;
-    height: 5em;
-}
+    /*Aside*/
+    aside {
+        grid-area: aside;
+        border-right: 3px solid black;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: unset;
+        font-size: 1.5em;
+    }
 
-.jauge {
-    border-bottom: 3px solid black;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+    .listAsideMany {
+        font-weight: bold;
+        list-style: unset;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 12em;
+    }
 
-.asideContent {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 15em; */
+    .listAsideFew {
+        font-weight: bold;
+        list-style: unset;
+        height: 100%;
+        justify-content: space-around;
+        height: 5em;
+    }
 
-}
+    .jauge {
+        border-bottom: 3px solid black;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
-h3 {
-    margin-bottom: 1em;
-    font-size: 1.4em;
-}
-
-
-/*Main*/
-main {
-    height: 75%;
-    grid-area: main;
-    /* border : 1px solid black; */
-    display : flex;
-}
-
-.mainGridLeft {
-    display : grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr 1fr;
-    gap: 10px ;
-}
-
-.mainGridRight {
-    margin-top: 3em;
-    display : grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.25fr 1fr 1fr;
-    gap: 10px ;
-}
+    h3 {
+        margin-bottom: 1em;
+        font-size: 1.4em;
+    }
 
 
-.mainContent {
-    /* border : 1px solid black; */
-    height: 100%;
-}
+    /*Main*/
+    main {
+        height: 75%;
+        grid-area: main;
+        display: flex;
+        font-size: 1.5em;
+    }
 
-.mainContentTitre {
-    /* border : 1px solid black; */
-    height: 100%;
- 
-}
+    .mainGridLeft {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+
+    .mainGridRight {
+        margin-top: 6em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.25fr 1fr 1fr;
+        gap: 10px;
+    }
+
+
+    .mainContent {
+        height: 100%;
+    }
+
+    .mainContentTitre {
+        height: 20%;
+
+    }
 
 }
-
-#hobbiesBold {
-    font-weight: bold;
-}
-
-.hobbies {
-    font-style: italic;
-}
-
