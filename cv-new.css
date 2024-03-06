@@ -37,7 +37,7 @@ main,
 }
 
 .Titre {
-    text-align: center;
+    text-align:left;
 }
 
 p {
@@ -97,8 +97,12 @@ h1, h2 {
     font-family: Playfair_Display;
 }
 
+h1, h3 {
+    font-family: Baron_Neue;
+    font-size: 2em;
+}
+
 h3 {
-    
     margin-bottom: 1em;
     font-size: 1.4em;
 }
@@ -107,7 +111,7 @@ h3 {
     font-family: EB_Garamond;
     gap: 5px 5px;
 }
-#newsContent {
+.newsContent {
     display: block;
     line-height: 1.6em;
 }
@@ -136,17 +140,12 @@ header {
     box-sizing: border-box;
 }
 
-#name {
-    font-size: 4em;
+h1 {
     width: 100%;
-    height: fit-content;
-}
-
-.nameTitle {
-    font-size: 10em;
+    font-size: 5em;
     margin-bottom: 0.3em;    
     height: fit-content;
-    font-family: baron-neue;
+    font-family: Baron_Neue;
     
 }
 
@@ -258,6 +257,9 @@ img {
     margin-right: 2em;
 }
 
+#languagesJauges {
+    height: 150%;
+}
 
  
 .jauge {
@@ -269,6 +271,7 @@ img {
     transition-delay: 200ms;
     transition-duration: 1s;
     transition-timing-function: ease-in;
+    
 }
 
 
@@ -279,27 +282,19 @@ img {
     transition-timing-function: ease-out;
 }
 
-#cssJauge:hover {
-    width: 90%;
+#ScssJauge:hover {
+    width: 70%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
 
 #javascriptJauge:hover {
-    width: 60%;
+    width: 70%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
-
-#ScssJauge:hover {
-    width: 60%;
-    overflow-x: hidden;
-    transition-duration: 2s;
-    transition-timing-function: ease-out;
-}
-
 
 #sqlJauge:hover {
     width: 70%;
@@ -309,14 +304,14 @@ img {
 }
 
 #phpJauge:hover {
-    width: 70%;
+    width: 80%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
 
 
-#hobbiesBold {
+.hobbiesBold {
     font-weight: bold;
     font-family: Playfair_Display;
 }
@@ -401,6 +396,7 @@ footer {
         gap: 0px 0px;
         grid-template-areas:
             "aside header header"
+            "aside main main"
             "aside main main"
             "aside main main"
             "aside main main"
@@ -496,6 +492,7 @@ footer {
         flex-direction: column;
         justify-content: space-between;
         height: 12em;
+        list-style: none;
     }
 
     .listAsideFew {
@@ -512,7 +509,7 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 45%;
+        width: 55%;
         margin-top: 0.5em;
         overflow-x: hidden;
         transition-delay: 200ms;
