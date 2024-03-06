@@ -111,7 +111,10 @@ h3 {
     display: block;
     line-height: 1.6em;
 }
-
+.specialityFont {
+    font-family: EB_Garamond;
+font-style: italic;
+}
 
 /*_____________________________________________________Header properties____________________________________________________________________________________________________________*/
 
@@ -185,22 +188,26 @@ width:30%;
 aside {
 
     /* border-right: 3px solid black; */
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
-    
+    padding-bottom: 1em;
 }
 
 #RS {
-    
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-left: 1.2em;
-    gap: 0px 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2em 0em;
 }
+li a {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+
 
 .listAsideID {
     margin-top: 1em;
@@ -208,7 +215,7 @@ aside {
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         height: 15em;
 }
 
@@ -218,13 +225,45 @@ aside {
     height: 100%
 }
 
+.listAsideFew {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    list-style: unset;
+    height: 100%;
+    justify-content: space-between;
+    height: 5em;
+}
+
+.asideHobbies {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.asideContent {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+li img {
+    display: inline-block;
+
+}
+
+img {
+    margin-right: 2em;
+}
+
+
+ 
 .jauge {
     border-bottom: 3px solid black;
     list-style: none;
-}
-
-.jauge {
-    width: 35%;
+    width: 45%;
     margin-top: 0.5em;
     overflow-x: hidden;
     transition-delay: 200ms;
@@ -241,28 +280,36 @@ aside {
 }
 
 #cssJauge:hover {
-    width: 80%;
+    width: 90%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
 
 #javascriptJauge:hover {
-    width: 50%;
+    width: 60%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
 
-#sqlJauge:hover {
+#ScssJauge:hover {
     width: 60%;
+    overflow-x: hidden;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+
+#sqlJauge:hover {
+    width: 70%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
 }
 
 #phpJauge:hover {
-    width: 60%;
+    width: 70%;
     overflow-x: hidden;
     transition-duration: 2s;
     transition-timing-function: ease-out;
