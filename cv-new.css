@@ -512,6 +512,14 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 45%;
+        margin-top: 0.5em;
+        overflow-x: hidden;
+        transition-delay: 200ms;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+
+
     }
 
     h3 {
